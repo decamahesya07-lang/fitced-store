@@ -1,0 +1,6 @@
+{
+  "name": "FitForge Store - Suplemen & Kebugaran",
+  "description": "E-Commerce Penjualan Suplemen dan Alat Kebugaran Berbasis Web murni HTML, CSS, dan JavaScript native sesuai SOP.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
