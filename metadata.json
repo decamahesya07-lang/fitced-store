@@ -1,0 +1,6 @@
+{
+  "name": "FitCed Store - Suplemen & Kebugaran",
+  "description": "E-Commerce Penjualan Suplemen BPOM dan Alat Kebugaran Berbasis Web dengan 20 katalog produk lengkap dan integrasi pemesanan WhatsApp.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

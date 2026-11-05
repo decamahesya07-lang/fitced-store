@@ -1,0 +1,571 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FitCed Store - Suplemen & Kebugaran</title>
+    <meta name="description" content="E-Commerce Penjualan Suplemen BPOM dan Alat Kebugaran Berbasis Web dengan 20 katalog produk lengkap dan integrasi pemesanan WhatsApp." />
+    <meta property="og:title" content="FitCed Store - Suplemen & Kebugaran" />
+    <meta property="og:description" content="E-Commerce Penjualan Suplemen BPOM dan Alat Kebugaran Berbasis Web dengan 20 katalog produk lengkap dan integrasi pemesanan WhatsApp." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Favicon SVG -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23ea580c'><path d='M6.5 5h11v2h-11zM4 9h16v2H4zm3 4h10v2H7zm-3 4h16v2H4z'/></svg>" />
+
+    <!-- Stylesheet Native Sesuai SOP -->
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <!-- Skip Link Aksesibilitas -->
+    <a href="#main-content" class="skip-link">Lewati ke konten utama</a>
+
+    <!-- Live Region untuk Pengumuman Screen Reader -->
+    <div id="live-region" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+
+    <!-- Header / Top Bar Contract -->
+    <header class="site-header" role="banner">
+      <div class="container header-container">
+        <!-- Zone 1: Single text wordmark -->
+        <a href="#" class="brand-wordmark" aria-label="FitCed Store - Beranda">
+          <svg class="brand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="m6.5 6.5 11 11" />
+            <path d="m21 21-1-1" />
+            <path d="m3 3 1 1" />
+            <path d="m18 22 4-4" />
+            <path d="m2 6 4-4" />
+            <path d="m3 10 7-7" />
+            <path d="m14 21 7-7" />
+          </svg>
+          <span>FitCed Store</span>
+        </a>
+
+        <!-- Zone 2: Navigation Links -->
+        <nav class="site-nav" aria-label="Navigasi Utama">
+          <a href="#katalog" class="nav-link">Katalog Produk</a>
+          <a href="#keunggulan" class="nav-link">Keunggulan</a>
+          <a href="#cara-pesan" class="nav-link">Cara Pesan</a>
+          <a href="#faq" class="nav-link">FAQ</a>
+          <a href="#kontak" class="nav-link">Kontak & Lokasi</a>
+        </nav>
+
+        <!-- Zone 3: 1 Primary Action (Tombol Keranjang) -->
+        <div class="header-actions">
+          <button 
+            type="button" 
+            id="open-cart-btn" 
+            class="cart-button-trigger" 
+            aria-label="Buka Keranjang Belanja, memuat 0 barang"
+            aria-haspopup="dialog" 
+            aria-controls="cart-drawer"
+          >
+            <svg class="cart-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="8" cy="21" r="1"/>
+              <circle cx="19" cy="21" r="1"/>
+              <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/>
+            </svg>
+            <span>Keranjang</span>
+            <span id="header-cart-badge" class="cart-counter-badge tabular-nums">0</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Konten Utama -->
+    <main id="main-content">
+      <!-- 1. Hero Section -->
+      <section class="hero-section" aria-labelledby="hero-heading">
+        <div class="container">
+          <div class="hero-grid">
+            <div class="hero-content">
+              <p class="hero-kicker">Suplemen Resmi & Peralatan Gym Berkualitas</p>
+              <h1 id="hero-heading" class="hero-title">
+                Bentuk Fisik & Performa Puncak dengan Perlengkapan Asli
+              </h1>
+              <p class="hero-description">
+                Penyedia nutrisi olahraga bersertifikasi BPOM dan peralatan beban kelas komersial. Dapatkan estimasi belanja transparan dan ajukan pesanan langsung ke admin via WhatsApp resmi.
+              </p>
+              <div class="hero-cta-group">
+                <a href="#katalog" class="btn-primary">
+                  <span>Lihat Katalog Produk</span>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="m9 18 6-6-6-6"/>
+                  </svg>
+                </a>
+                <a href="#cara-pesan" class="btn-secondary">
+                  <span>Panduan Pemesanan</span>
+                </a>
+              </div>
+            </div>
+            <div class="hero-media-wrapper">
+              <img 
+                src="/assets/images/hero_showcase_supplements_1793784399350.jpg" 
+                alt="Display suplemen resmi FitCed Store dengan segel distributor resmi dan registrasi BPOM RI" 
+                class="hero-image"
+                width="960" 
+                height="600"
+                loading="eager"
+                referrerpolicy="no-referrer"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2. Jaminan Kualitas (Value Strip) -->
+      <section id="keunggulan" class="value-strip" aria-label="Jaminan Kualitas Toko">
+        <div class="container">
+          <div class="value-grid">
+            <div class="value-item">
+              <svg class="value-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/>
+                <path d="m9 12 2 2 4-4"/>
+              </svg>
+              <div>
+                <h2 class="value-title">100% Produk Asli & Terdaftar BPOM</h2>
+                <p class="value-desc">Seluruh suplemen memiliki nomor registrasi BPOM RI dan segel distributor resmi.</p>
+              </div>
+            </div>
+            <div class="value-item">
+              <svg class="value-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect width="20" height="14" x="2" y="5" rx="2"/>
+                <line x1="2" x2="22" y1="10" y2="10"/>
+              </svg>
+              <div>
+                <h2 class="value-title">Garansi Alat Kebugaran Solid</h2>
+                <p class="value-desc">Peralatan beban besi cor dan matras lolos uji ketahanan untuk latihan intensif.</p>
+              </div>
+            </div>
+            <div class="value-item">
+              <svg class="value-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="1" y="3" width="15" height="13"/>
+                <polygon points="16 8 20 8 23 11 23 16 16 16 8"/>
+                <circle cx="5.5" cy="18.5" r="2.5"/>
+                <circle cx="18.5" cy="18.5" r="2.5"/>
+              </svg>
+              <div>
+                <h2 class="value-title">Pengiriman Cepat & Ambil di Toko</h2>
+                <p class="value-desc">Pilihan kurir instan Jabodetabek, ekspedisi ke seluruh Indonesia, atau self-pickup gratis.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. Katalog Produk & Filter -->
+      <section id="katalog" class="catalog-section" aria-labelledby="catalog-heading">
+        <div class="container">
+          <header class="section-header">
+            <p class="section-kicker">Koleksi Terlengkap (20 Produk)</p>
+            <h2 id="catalog-heading" class="section-title">Katalog Suplemen & Alat Kebugaran</h2>
+            <p class="section-subtitle">Temukan nutrisi pendukung dan perlengkapan latihan beban sesuai target kebugaran Anda.</p>
+          </header>
+
+          <!-- Toolbar: Pencarian dan Filter Kategori -->
+          <div class="catalog-toolbar">
+            <div class="search-box">
+              <label for="catalog-search-input" class="sr-only">Cari produk berdasarkan nama atau spesifikasi</label>
+              <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="11" cy="11" r="8"/>
+                <path d="m21 21-4.3-4.3"/>
+              </svg>
+              <input 
+                type="search" 
+                id="catalog-search-input" 
+                class="search-input" 
+                placeholder="Cari suplemen, dumbbell, creatine..."
+                autocomplete="off"
+              />
+            </div>
+
+            <!-- Segmented Category Filter Buttons -->
+            <div id="category-filter-container" class="category-filter-bar" role="toolbar" aria-label="Filter Kategori Produk">
+              <!-- Tombol kategori akan di-render secara dinamis oleh JavaScript -->
+            </div>
+          </div>
+
+          <!-- Status Bar Hasil -->
+          <div class="catalog-status-bar">
+            <span id="catalog-count-text">Menampilkan semua produk</span>
+            <button type="button" id="reset-catalog-btn" class="btn-remove-item" style="display: none;">
+              Reset Pencarian & Filter
+            </button>
+          </div>
+
+          <!-- Grid Daftar Produk -->
+          <div id="product-grid" class="product-grid" role="region" aria-live="polite">
+            <!-- Kartu produk akan di-render oleh JavaScript -->
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. Formulir Pemesanan & Ringkasan Checkout -->
+      <section id="checkout-section" class="checkout-section" aria-labelledby="checkout-heading">
+        <div class="container">
+          <header class="section-header">
+            <p class="section-kicker">Langkah Akhir</p>
+            <h2 id="checkout-heading" class="section-title">Formulir Pemesanan</h2>
+            <p class="section-subtitle">Lengkapi data penerima dan pilih metode pengiriman untuk memeriksa ringkasan pesanan sebelum beralih ke WhatsApp.</p>
+          </header>
+
+          <div class="checkout-grid">
+            <!-- Kolom Kiri: Formulir Data Pembeli -->
+            <div class="checkout-card">
+              <form id="checkout-form" novalidate>
+                <!-- Nama Pembeli -->
+                <div class="form-group">
+                  <label for="customer-name" class="form-label">
+                    Nama Lengkap <span aria-hidden="true" style="color: var(--color-error);">*</span>
+                  </label>
+                  <input 
+                    type="text" 
+                    id="customer-name" 
+                    name="name" 
+                    class="form-input" 
+                    placeholder="Contoh: Budi Pratama" 
+                    required 
+                    minlength="2" 
+                    maxlength="80"
+                    aria-describedby="name-error"
+                  />
+                  <span id="name-error" class="field-error-msg" role="alert"></span>
+                </div>
+
+                <!-- Nomor WhatsApp -->
+                <div class="form-group">
+                  <label for="customer-phone" class="form-label">
+                    Nomor WhatsApp Aktif <span aria-hidden="true" style="color: var(--color-error);">*</span>
+                  </label>
+                  <input 
+                    type="tel" 
+                    id="customer-phone" 
+                    name="phone" 
+                    class="form-input" 
+                    placeholder="Contoh: 081234567890 atau 6281234567890" 
+                    required
+                    aria-describedby="phone-error"
+                  />
+                  <span id="phone-error" class="field-error-msg" role="alert"></span>
+                </div>
+
+                <!-- Opsi Metode Pengiriman -->
+                <div class="form-group">
+                  <label class="form-label">
+                    Metode Pengambilan / Pengiriman <span aria-hidden="true" style="color: var(--color-error);">*</span>
+                  </label>
+                  <div id="shipping-methods-container" class="shipping-options-list" role="radiogroup" aria-label="Pilih Opsi Pengiriman">
+                    <!-- Opsi pengiriman di-render oleh JavaScript -->
+                  </div>
+                </div>
+
+                <!-- Alamat Pengiriman (Ditampilkan bila membutuhkan kurir) -->
+                <div id="address-form-group" class="form-group">
+                  <label for="customer-address" class="form-label">
+                    Alamat Pengiriman Lengkap <span aria-hidden="true" style="color: var(--color-error);">*</span>
+                  </label>
+                  <textarea 
+                    id="customer-address" 
+                    name="address" 
+                    rows="3" 
+                    class="form-textarea" 
+                    placeholder="Sebutkan nama jalan, nomor rumah, RT/RW, kelurahan, kecamatan, kota, dan patokan..."
+                    aria-describedby="address-error"
+                  ></textarea>
+                  <span id="address-error" class="field-error-msg" role="alert"></span>
+                </div>
+
+                <!-- Catatan Tambahan -->
+                <div class="form-group">
+                  <label for="customer-note" class="form-label">
+                    Catatan Pesanan (Opsional)
+                  </label>
+                  <input 
+                    type="text" 
+                    id="customer-note" 
+                    name="note" 
+                    class="form-input" 
+                    placeholder="Contoh: Rasa cokelat, kemas bubble wrap tebal, telepon sebelum sampai..." 
+                  />
+                </div>
+
+                <div style="margin-top: 1.5rem;">
+                  <button type="submit" id="submit-checkout-btn" class="btn-primary" style="width: 100%;">
+                    <span>Periksa & Lanjutkan ke WhatsApp</span>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="m9 18 6-6-6-6"/>
+                    </svg>
+                  </button>
+                </div>
+              </form>
+            </div>
+
+            <!-- Kolom Kanan: Ringkasan Total Belanja -->
+            <div class="order-summary-box" aria-labelledby="summary-box-heading">
+              <h3 id="summary-box-heading" class="summary-heading">Ringkasan Pesanan</h3>
+
+              <!-- Daftar Barang Mini -->
+              <div id="summary-items-list" class="summary-items-scroll">
+                <!-- Diisi oleh JavaScript -->
+              </div>
+
+              <!-- Baris Rincian Biaya -->
+              <div class="summary-row">
+                <span>Subtotal Barang</span>
+                <span id="summary-subtotal-val" class="tabular-nums" style="font-weight: 600;">Rp 0</span>
+              </div>
+              <div class="summary-row">
+                <span>Ongkos Kirim</span>
+                <span id="summary-shipping-val" class="tabular-nums" style="font-weight: 600;">Rp 0</span>
+              </div>
+              <div class="summary-row total-row">
+                <span>Total Estimasi</span>
+                <span id="summary-total-val" class="tabular-nums">Rp 0</span>
+              </div>
+
+              <div class="summary-disclaimer">
+                <p><strong>Ketentuan Pemesanan:</strong></p>
+                <p>Data kontak dan rincian pesanan akan disusun ke WhatsApp resmi toko (+62 896-0109-1390). Anda perlu menekan tombol kirim pesan di WhatsApp. Admin toko akan memverifikasi ketersediaan stok fisik dan memberikan nomor rekening resmi sebelum pembayaran diselesaikan.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. Cara Pesan & FAQ -->
+      <section id="cara-pesan" class="info-section" aria-labelledby="guide-heading">
+        <div class="container">
+          <div class="info-grid">
+            <!-- Langkah Belanja -->
+            <div>
+              <p class="section-kicker">Alur Belanja</p>
+              <h2 id="guide-heading" class="section-title">4 Langkah Mudah Berbelanja</h2>
+              <div class="step-list">
+                <div class="step-card">
+                  <div class="step-number">1</div>
+                  <div class="step-content">
+                    <h3>Pilih Suplemen & Alat Kebugaran</h3>
+                    <p>Telusuri katalog 20 produk berlatar putih bersih, gunakan pencarian instan dan filter kategori.</p>
+                  </div>
+                </div>
+                <div class="step-card">
+                  <div class="step-number">2</div>
+                  <div class="step-content">
+                    <h3>Atur Jumlah & Metode Pengiriman</h3>
+                    <p>Sesuaikan kuantitas di keranjang dan pilih antara ambil langsung di toko fisik atau pengiriman kurir ke rumah Anda.</p>
+                  </div>
+                </div>
+                <div class="step-card">
+                  <div class="step-number">3</div>
+                  <div class="step-content">
+                    <h3>Periksa & Ajukan via WhatsApp</h3>
+                    <p>Formulir akan menyusun draf pesan rapi. Buka tautan WhatsApp untuk mengirim detail pesanan ke admin kami.</p>
+                  </div>
+                </div>
+                <div class="step-card">
+                  <div class="step-number">4</div>
+                  <div class="step-content">
+                    <h3>Konfirmasi Stok & Pembayaran</h3>
+                    <p>Admin mengonfirmasi ketersediaan barang, memberikan info rekening toko, dan memproses pengiriman dengan aman.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ Accordion -->
+            <div id="faq">
+              <p class="section-kicker">Tanya Jawab</p>
+              <h2 class="section-title">Pertanyaan yang Sering Diajukan</h2>
+              <div class="faq-list">
+                <details class="faq-item" open>
+                  <summary class="faq-summary">Apakah semua suplemen dijamin asli dan memiliki izin BPOM?</summary>
+                  <div class="faq-body">
+                    Ya, 100% suplemen yang kami jual memiliki izin edar resmi dari BPOM RI dan sertifikasi Halal yang valid. Produk diambil langsung dari distributor resmi bersertifikat dengan segel keamanan utuh.
+                  </div>
+                </details>
+
+                <details class="faq-item">
+                  <summary class="faq-summary">Bagaimana kebijakan pengiriman dumbbell dan alat beban berat?</summary>
+                  <div class="faq-body">
+                    Untuk wilayah Jabodetabek, Anda dapat memilih Kurir Instan (mobil/motor sesuai batas muatan) atau datang langsung mengambil ke toko fisik kami tanpa biaya kirim. Untuk luar kota, kami bekerja sama dengan ekspedisi kargo resmi bertarif hemat.
+                  </div>
+                </details>
+
+                <details class="faq-item">
+                  <summary class="faq-summary">Kapan pesanan saya akan diproses?</summary>
+                  <div class="faq-body">
+                    Pesanan diproses pada hari kerja toko (Senin–Sabtu: 08.00–21.00 WIB). Konfirmasi pembayaran yang masuk sebelum pukul 15.00 WIB akan dikirim pada hari yang sama.
+                  </div>
+                </details>
+
+                <details class="faq-item">
+                  <summary class="faq-summary">Apakah bisa melakukan pembayaran di tempat (COD)?</summary>
+                  <div class="faq-body">
+                    Layanan bayar di tempat berlaku untuk opsi Ambil di Toko (Self-Pickup) dengan pembayaran tunai, debit, atau QRIS di kasir toko fisik kami. Untuk pengiriman kurir, pembayaran dilakukan melalui transfer bank resmi toko.
+                  </div>
+                </details>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6. Kontak & Lokasi Toko -->
+      <section id="kontak" class="info-section" style="background-color: var(--color-surface); border-top: 1px solid var(--color-border);" aria-labelledby="contact-heading">
+        <div class="container">
+          <header class="section-header">
+            <p class="section-kicker">Kunjungi Toko Fisik</p>
+            <h2 id="contact-heading" class="section-title">Lokasi & Layanan Pelanggan</h2>
+            <p class="section-subtitle">Kunjungi outlet kami untuk melihat langsung perlengkapan gym atau berkonsultasi seputar nutrisi olahraga.</p>
+          </header>
+
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+            <div style="padding: 1.5rem; background-color: var(--color-surface-subtle); border-radius: var(--radius-lg); border: 1px solid var(--color-border);">
+              <h3 style="font-size: 1rem; font-weight: 700; color: var(--color-brand-dark); margin-bottom: 0.5rem;">Alamat Outlet</h3>
+              <p style="font-size: 0.875rem; color: var(--color-text-muted); line-height: 1.6;">
+                Jl. Boulevard Kebugaran No. 88, Grand Sports Center, Jakarta Selatan 12430 (Dekat stasiun MRT & pusat kebugaran utama).
+              </p>
+            </div>
+            <div style="padding: 1.5rem; background-color: var(--color-surface-subtle); border-radius: var(--radius-lg); border: 1px solid var(--color-border);">
+              <h3 style="font-size: 1rem; font-weight: 700; color: var(--color-brand-dark); margin-bottom: 0.5rem;">Jam Operasional</h3>
+              <p style="font-size: 0.875rem; color: var(--color-text-muted); line-height: 1.6;">
+                Senin – Sabtu: 08.00 – 21.00 WIB<br>
+                Minggu & Hari Libur: 09.00 – 17.00 WIB
+              </p>
+            </div>
+            <div style="padding: 1.5rem; background-color: var(--color-surface-subtle); border-radius: var(--radius-lg); border: 1px solid var(--color-border);">
+              <h3 style="font-size: 1rem; font-weight: 700; color: var(--color-brand-dark); margin-bottom: 0.5rem;">Kontak WhatsApp & Email</h3>
+              <p style="font-size: 0.875rem; color: var(--color-text-muted); line-height: 1.6;">
+                WhatsApp Resmi: +62 896-0109-1390<br>
+                Email Support: halo@fitcedstore.id
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer" role="contentinfo">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-col">
+            <h4>FitCed Store</h4>
+            <p>E-Commerce spesialis penjualan suplemen fitness dan perlengkapan angkat beban bersertifikasi resmi. Kami mendukung perjalanan kebugaran atlet, bodybuilder, dan pegiat gaya hidup sehat di seluruh Indonesia.</p>
+          </div>
+          <div class="footer-col">
+            <h4>Kategori Utama</h4>
+            <p>
+              • Whey Protein & Gainer<br>
+              • Kreatin & Pre-Workout<br>
+              • Vitamin & Pemulihan Sendi<br>
+              • Dumbbell & Beban Komersial<br>
+              • Matras & Aksesori Gym
+            </p>
+          </div>
+          <div class="footer-col">
+            <h4>Kebijakan & Keamanan</h4>
+            <p>Pemesanan melalui WhatsApp tidak secara otomatis menjadi transaksi selesai. Konfirmasi pembayaran dan pengiriman barang disepakati secara resmi setelah pengecekan stok fisik oleh admin toko.</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div>&copy; 2026 FitCed Store. Hak Cipta Dilindungi Undang-Undang.</div>
+          <div>Website Statis Native HTML5, CSS3, & JavaScript ES Modules.</div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Cart Slide-Over Drawer -->
+    <div id="drawer-backdrop" class="drawer-backdrop" aria-hidden="true"></div>
+    <aside 
+      id="cart-drawer" 
+      class="cart-drawer" 
+      role="dialog" 
+      aria-modal="true" 
+      aria-labelledby="drawer-heading"
+      aria-hidden="true"
+    >
+      <div class="drawer-header">
+        <h2 id="drawer-heading" class="drawer-title">Keranjang Belanja</h2>
+        <button type="button" id="close-drawer-btn" class="btn-close-drawer" aria-label="Tutup Keranjang Belanja">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="18" y1="6" x2="6" y2="18"/>
+            <line x1="6" y1="6" x2="18" y2="18"/>
+          </svg>
+        </button>
+      </div>
+
+      <div class="drawer-body">
+        <div id="cart-drawer-items" class="cart-items-list">
+          <!-- Item keranjang di-render oleh JavaScript -->
+        </div>
+      </div>
+
+      <div class="drawer-footer">
+        <div class="cart-subtotal-row">
+          <span>Subtotal Barang:</span>
+          <span id="drawer-subtotal-val" class="tabular-nums" style="font-weight: 700; color: var(--color-brand-dark);">Rp 0</span>
+        </div>
+        <div class="cart-total-row">
+          <span>Total Estimasi:</span>
+          <span id="drawer-total-val" class="tabular-nums" style="color: var(--color-accent);">Rp 0</span>
+        </div>
+        <button type="button" id="drawer-to-checkout-btn" class="btn-checkout-drawer">
+          <span>Lanjut ke Formulir Pemesanan</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="m9 18 6-6-6-6"/>
+          </svg>
+        </button>
+      </div>
+    </aside>
+
+    <!-- Modal Dialog Review Pesanan Final -->
+    <div id="order-review-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-review-heading" aria-hidden="true">
+      <div class="modal-card">
+        <div class="modal-header">
+          <h2 id="modal-review-heading" class="modal-title">Periksa Draf Pesanan WhatsApp</h2>
+          <button type="button" id="close-review-modal-btn" class="btn-close-drawer" aria-label="Tutup Ringkasan">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="18" y1="6" x2="6" y2="18"/>
+              <line x1="6" y1="6" x2="18" y2="18"/>
+            </svg>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p style="margin-bottom: 0.75rem; color: var(--color-text-muted); font-size: 0.8125rem;">
+            Berikut adalah draf pesan yang akan otomatis dimuat ke aplikasi WhatsApp Anda. Pastikan nama, nomor kontak, dan daftar produk sudah sesuai sebelum membuka WhatsApp.
+          </p>
+
+          <pre id="modal-message-preview" class="modal-preview-box" tabindex="0" aria-label="Teks Pesan WhatsApp"></pre>
+
+          <div style="background-color: #fffbeb; border: 1px solid #fef3c7; border-radius: var(--radius-md); padding: 0.75rem; font-size: 0.75rem; color: #92400e;">
+            <strong>Catatan Penting:</strong> Setelah WhatsApp terbuka, Anda masih harus menekan tombol <strong>Kirim</strong> di aplikasi WhatsApp Anda. Admin akan mengonfirmasi ketersediaan barang secara manual.
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" id="btn-edit-order" class="btn-secondary" style="color: var(--color-text-main); border-color: var(--color-border); background: var(--color-surface);">
+            Ubah Data
+          </button>
+          <a id="btn-send-whatsapp" href="#" target="_blank" rel="noopener noreferrer" class="btn-whatsapp-submit">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.101.005.242-.039.378.29.144.347.491 1.2.534 1.288.043.088.072.19.014.305-.058.115-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86.174.086.275.072.376-.044.101-.116.433-.506.549-.68.116-.173.231-.145.39-.086.159.058 1.011.477 1.184.564.173.087.289.13.332.202.043.073.043.42-.101.825z"/>
+            </svg>
+            <span>Buka di WhatsApp</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Container Notifikasi Toast -->
+    <div id="toast-container" class="toast-container" aria-hidden="true"></div>
+
+    <!-- Noscript Fallback -->
+    <noscript>
+      <div style="background-color: #fff3cd; color: #856404; padding: 1.5rem; text-align: center; font-weight: bold; border-bottom: 2px solid #ffeeba;">
+        Situs web ini membutuhkan JavaScript untuk fitur pencarian katalog, kalkulasi keranjang belanja, dan pemesanan WhatsApp. Silakan aktifkan JavaScript pada browser Anda.
+      </div>
+    </noscript>
+
+    <!-- Modul JavaScript ES6 Native Sesuai SOP -->
+    <script type="module" src="/js/app.js"></script>
+  </body>
+</html>
